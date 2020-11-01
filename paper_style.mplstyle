@@ -1,0 +1,386 @@
+#backend : agg
+
+### LINES
+# See http://matplotlib.org/api/artist_api.html#module-matplotlib.lines for more
+# information on line properties.
+lines.linewidth   : 3.0     # line width in points
+lines.linestyle   : -       # solid line
+lines.color       : b       # has no affect on plot(); see axes.prop_cycle
+lines.marker      : None    # the default marker
+lines.markeredgewidth  : 0.5     # the line width around the marker symbol
+lines.markersize  : 10            # markersize, in points
+lines.dash_joinstyle : round        # miter|round|bevel
+lines.dash_capstyle : butt          # butt|round|projecting
+lines.solid_joinstyle : round       # miter|round|bevel
+lines.solid_capstyle : projecting   # butt|round|projecting
+lines.antialiased : True         # render lines in antialiased (no jaggies)
+
+### Marker props
+markers.fillstyle: full
+
+### PATCHES
+patch.linewidth        : 1.0     # edge width in points
+patch.facecolor        : D7191C # it was b
+patch.edgecolor        : k
+patch.antialiased      : True    # render patches in antialiased (no jaggies)
+
+### FONT
+font.family         : serif
+font.style          : normal
+font.variant        : normal
+font.weight         : normal
+font.stretch        : normal
+font.size           : 12.0
+font.serif     : Bitstream Vera Serif, DejaVu Serif, New Century Schoolbook, Century Schoolbook L, Utopia, ITC Bookman, Bookman, Nimbus Roman No9 L, Times New Roman, Times, Palatino, Charter, serif
+font.sans-serif: Bitstream Vera Sans, DejaVu Sans, Lucida Grande, Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif
+font.cursive   : Apple Chancery, Textile, Zapf Chancery, Sand, Script MT, Felipa, cursive
+font.fantasy   : Comic Sans MS, Chicago, Charcoal, ImpactWestern, Humor Sans, fantasy
+font.monospace : Bitstream Vera Sans Mono, DejaVu Sans Mono, Andale Mono, Nimbus Mono L, Courier New, Courier, Fixed, Terminal, monospace
+
+### TEXT
+text.color          : k
+
+### LaTeX customizations. See http://www.scipy.org/Wiki/Cookbook/Matplotlib/UsingTex
+text.usetex         : True  # use latex for all text handling. The following fonts
+                             # are supported through the usual rc parameter settings:
+                             # new century schoolbook, bookman, times, palatino,
+                             # zapf chancery, charter, serif, sans-serif, helvetica,
+                             # avant garde, courier, monospace, computer modern roman,
+                             # computer modern sans serif, computer modern typewriter
+                             # If another font is desired which can loaded using the
+                             # LaTeX \usepackage command, please inquire at the
+                             # matplotlib mailing list
+text.latex.unicode : False # use "ucs" and "inputenc" LaTeX packages for handling
+                           # unicode strings.
+text.latex.preamble :  # IMPROPER USE OF THIS FEATURE WILL LEAD TO LATEX FAILURES
+                           # AND IS THEREFORE UNSUPPORTED. PLEASE DO NOT ASK FOR HELP
+                           # IF THIS FEATURE DOES NOT DO WHAT YOU EXPECT IT TO.
+                           # preamble is a comma separated list of LaTeX statements
+                           # that are included in the LaTeX document preamble.
+                           # An example:
+                           # text.latex.preamble : \usepackage{bm},\usepackage{euler}
+                           # The following packages are always loaded with usetex, so
+                           # beware of package collisions: color, geometry, graphicx,
+                           # type1cm, textcomp. Adobe Postscript (PSSNFS) font packages
+                           # may also be loaded, depending on your font settings
+text.latex.preview : False
+
+text.hinting : auto   # May be one of the following:
+                      #   'none': Perform no hinting
+                      #   'auto': Use freetype's autohinter
+                      #   'native': Use the hinting information in the
+                      #             font file, if available, and if your
+                      #             freetype library supports it
+                      #   'either': Use the native hinting information,
+                      #             or the autohinter if none is available.
+                      # For backward compatibility, this value may also be
+                      # True === 'auto' or False === 'none'.
+text.hinting_factor : 8 # Specifies the amount of softness for hinting in the
+                        # horizontal direction.  A value of 1 will hint to full
+                        # pixels.  A value of 2 will hint to half pixels etc.
+
+text.antialiased : True # If True (default), the text will be antialiased.
+                        # This only affects the Agg backend.
+
+# The following settings allow you to select the fonts in math mode.
+mathtext.cal : cursive
+mathtext.rm  : serif
+mathtext.tt  : monospace
+mathtext.it  : serif:italic
+mathtext.bf  : serif:bold
+mathtext.sf  : sans\-serif
+mathtext.fontset : cm # Should be 'cm' (Computer Modern), 'stix',
+                      # 'stixsans' or 'custom'
+mathtext.fallback_to_cm : True  # When True, use symbols from the Computer Modern
+                                # fonts when a symbol can not be found in one of
+                                # the custom math fonts.
+
+mathtext.default : it # The default font to use for math.
+                      # Can be any of the LaTeX font names, including
+                      # the special name "regular" for the same font
+                      # used in regular text.
+
+### AXES
+axes.facecolor      : w       # axes background color
+axes.edgecolor      : k       # axes edge color
+axes.linewidth      : 1.0     # edge linewidth
+axes.grid           : True   # display grid or not
+axes.grid.which     : major
+axes.grid.axis      : y
+axes.titlesize      : 16   # fontsize of the axes title
+axes.titleweight    : normal  # font weight for axes title
+axes.labelsize      : 14  # fontsize of the x any y labels
+axes.labelpad       : 5.0     # space between label and axis
+axes.labelweight    : normal  # weight of the x and y labels
+axes.labelcolor     : k
+axes.axisbelow      : True   # whether axis gridlines and ticks are below
+                              # the axes elements (lines, text, etc)
+
+axes.formatter.limits : -7, 7 # use scientific notation if log10
+                              # of the axis range is smaller than the
+                              # first or larger than the second
+axes.formatter.use_locale : False # When True, format tick labels
+                                  # according to the user's locale.
+                                  # For example, use ',' as a decimal
+                                  # separator in the fr_FR locale.
+axes.formatter.use_mathtext : False # When True, use mathtext for scientific
+                                    # notation.
+axes.formatter.useoffset      : True    # If True, the tick label formatter
+                                        # will default to labeling ticks relative
+                                        # to an offset when the data range is very
+                                        # small compared to the minimum absolute
+                                        # value of the data.
+
+axes.unicode_minus  : True    # use unicode for the minus symbol
+                              # rather than hyphen.  See
+                              # http://en.wikipedia.org/wiki/Plus_and_minus_signs#Character_codes
+axes.prop_cycle    : cycler('color', ['d7191c', '2b83ba', 'fdae61', 'abdda4', 'ffffbf'])
+                                           # color blind: ['c85200', '1f77b4', '595959', 'ababab', '5f9ed1', 'ff800e', '898989', 'a2c8ec', 'ffbc79', 'cfcfcf']
+                                           # color cycle for plot lines
+                                           # as list of string colorspecs:
+                                           # single letter, long name, or
+                                           # web-style hex
+axes.xmargin        : 0.1  # x margin.  See `axes.Axes.margins`
+axes.ymargin        : 0.1  # y margin See `axes.Axes.margins`
+axes.spines.bottom  : False
+axes.spines.left    : False
+axes.spines.right   : False
+axes.spines.top     : False
+polaraxes.grid      : True    # display grid on polar axes
+axes3d.grid         : True    # display grid on 3d axes
+
+### TICKS
+xtick.major.size     : 0      # major tick size in points
+xtick.minor.size     : 0      # minor tick size in points
+xtick.minor.visible  : False
+xtick.major.width    : 0.5    # major tick width in points
+xtick.minor.width    : 0.5    # minor tick width in points
+xtick.major.pad      : 4      # distance to major tick label in points
+xtick.minor.pad      : 4      # distance to the minor tick label in points
+xtick.color          : k      # color of the tick labels
+xtick.labelsize      : 13 # fontsize of the tick labels
+xtick.direction      : in     # direction: in, out, or inout
+
+ytick.major.size     : 0      # major tick size in points
+ytick.minor.size     : 0      # minor tick size in points
+ytick.minor.visible  : False
+ytick.major.width    : 0.5    # major tick width in points
+ytick.minor.width    : 0.5    # minor tick width in points
+ytick.major.pad      : 4      # distance to major tick label in points
+ytick.minor.pad      : 4      # distance to the minor tick label in points
+ytick.color          : k      # color of the tick labels
+ytick.labelsize      : 13 # fontsize of the tick labels
+ytick.direction      : in     # direction: in, out, or inout
+
+
+### GRIDS
+grid.color       :   k       # grid color
+grid.linestyle   :   --      # dotted
+grid.linewidth   :   0.5     # in points
+grid.alpha       :   0.3     # transparency, between 0.0 and 1.0
+
+### Legend
+legend.fancybox      : True  # if True, use a rounded box for the
+                              # legend, else a rectangle
+legend.loc           : upper right
+legend.numpoints     : 2      # the number of points in the legend line
+legend.fontsize      : 12
+legend.borderpad     : 0.4    # border whitespace in fontsize units
+legend.markerscale   : 1.0    # the relative size of legend markers vs. original
+# the following dimensions are in axes coords
+legend.labelspacing  : 0.5    # the vertical space between the legend entries in fraction of fontsize
+legend.handlelength  : 2.     # the length of the legend lines in fraction of fontsize
+legend.handleheight  : 0.7     # the height of the legend handle in fraction of fontsize
+legend.handletextpad : 0.8    # the space between the legend line and legend text in fraction of fontsize
+legend.borderaxespad : 0.5   # the border between the axes and legend edge in fraction of fontsize
+legend.columnspacing : 2.    # the border between the axes and legend edge in fraction of fontsize
+legend.shadow        : False
+legend.frameon       : True   # whether or not to draw a frame around legend
+legend.framealpha    : None    # opacity of of legend frame
+legend.scatterpoints : 3 # number of scatter points
+legend.facecolor     : inherit   # legend background color (when None inherits from axes.facecolor)
+legend.edgecolor     : inherit   # legend edge color (when None inherits from axes.facecolor)
+
+
+
+### FIGURE
+figure.titlesize : medium     # size of the figure title
+figure.titleweight : normal   # weight of the figure title
+figure.figsize   : 7., 4.32    # figure size in inches
+figure.dpi       : 100      # figure dots per inch
+figure.facecolor : w    # figure facecolor; 0.75 is scalar gray
+figure.edgecolor : w       # figure edgecolor
+figure.autolayout : False  # When True, automatically adjust subplot
+                           # parameters to make the plot fit the figure
+figure.frameon : True
+
+figure.subplot.left    : 0.125  # the left side of the subplots of the figure
+figure.subplot.right   : 0.9    # the right side of the subplots of the figure
+figure.subplot.bottom  : 0.1    # the bottom of the subplots of the figure
+figure.subplot.top     : 0.9    # the top of the subplots of the figure
+figure.subplot.wspace  : 0.2    # the amount of width reserved for blank space between subplots
+figure.subplot.hspace  : 0.2    # the amount of height reserved for white space between subplots
+
+### IMAGES
+image.aspect : equal             # equal | auto | a number
+image.interpolation  : bilinear  # see help(imshow) for options
+image.cmap   : RdYlBu               # gray | jet etc...
+image.lut    : 256               # the size of the colormap lookup table
+image.origin : lower             # lower | upper
+image.resample  : False
+image.composite_image : True
+
+### CONTOUR PLOTS
+contour.negative_linestyle :  dashed # dashed | solid
+contour.corner_mask : True
+
+errorbar.capsize: 3
+
+### Boxplots
+boxplot.bootstrap: None
+boxplot.boxprops.color: 0.25
+boxplot.boxprops.linestyle: -
+boxplot.boxprops.linewidth: 2.0
+boxplot.capprops.color: k
+boxplot.capprops.linestyle: -
+boxplot.capprops.linewidth: 3.0
+boxplot.flierprops.color: 0.25
+boxplot.flierprops.linestyle: -
+boxplot.flierprops.linewidth: 1.0
+boxplot.flierprops.marker: +
+boxplot.flierprops.markeredgecolor: k
+boxplot.flierprops.markerfacecolor: 0.25
+boxplot.flierprops.markersize: 6.0
+boxplot.meanline: False
+boxplot.meanprops.color: turquoise
+boxplot.meanprops.linestyle: -
+boxplot.meanprops.linewidth: 1.0
+boxplot.medianprops.color: 0.25
+boxplot.medianprops.linestyle: -
+boxplot.medianprops.linewidth: 3.0
+boxplot.notch: True
+boxplot.patchartist: True
+boxplot.showbox: True
+boxplot.showcaps: True
+boxplot.showfliers: False
+boxplot.showmeans: False
+boxplot.vertical: True
+boxplot.whiskerprops.color: 0.25
+boxplot.whiskerprops.linestyle: --
+boxplot.whiskerprops.linewidth: 3.0
+boxplot.whiskers: 1.5
+
+### Agg rendering
+agg.path.chunksize : 0           # 0 to disable; values in the range
+                                 # 10000 to 100000 can improve speed slightly
+                                 # and prevent an Agg rendering failure
+                                 # when plotting very large data sets,
+                                 # especially if they are very gappy.
+                                 # It may cause minor artifacts, though.
+                                 # A value of 20000 is probably a good
+                                 # starting point.
+### SAVING FIGURES
+path.simplify : True   # When True, simplify paths by removing "invisible"
+                       # points to reduce file size and increase rendering
+                       # speed
+path.simplify_threshold : 0.1111111111111111
+                               # The threshold of similarity below which
+                               # vertices will be removed in the simplification
+                               # process
+path.snap : True # When True, rectilinear axis-aligned paths will be snapped to
+                 # the nearest pixel when certain criteria are met.  When False,
+                 # paths will never be snapped.
+path.sketch : None # May be none, or a 3-tuple of the form (scale, length,
+                   # randomness).
+                   # *scale* is the amplitude of the wiggle
+                   # perpendicular to the line (in pixels).  *length*
+                   # is the length of the wiggle along the line (in
+                   # pixels).  *randomness* is the factor by which
+                   # the length is randomly scaled.
+
+savefig.dpi         : 100      # figure dots per inch
+savefig.facecolor   : w        # figure facecolor when saving
+savefig.edgecolor   : w        # figure edgecolor when saving
+savefig.format      : pdf      # png, ps, pdf, svg
+savefig.bbox        : tight # 'tight' or 'standard'.
+                               # 'tight' is incompatible with pipe-based animation
+                               # backends but will workd with temporary file based ones:
+                               # e.g. setting animation.writer to ffmpeg will not work,
+                               # use ffmpeg_file instead
+savefig.pad_inches  : 0.1      # Padding to be used when bbox is set to 'tight'
+savefig.jpeg_quality: 100      # when a jpeg is saved, the default quality parameter.
+savefig.transparent : True     # setting that controls whether figures are saved with a
+                               # transparent background by default
+savefig.frameon : True
+savefig.orientation : portrait
+
+nbagg.transparent: True
+
+# ps backend params
+ps.papersize      : letter   # auto, letter, legal, ledger, A0-A10, B0-B10
+ps.useafm         : False    # use of afm fonts, results in small files
+ps.usedistiller   : False    # can be: None, ghostscript or xpdf
+                                          # Experimental: may produce smaller files.
+                                          # xpdf intended for production of publication quality files,
+                                          # but requires ghostscript, xpdf and ps2eps
+ps.distiller.res  : 6000      # dpi
+ps.fonttype       : 3         # Output Type 3 (Type3) or Type 42 (TrueType)
+
+# pdf backend params
+pdf.compression   : 6 # integer from 0 to 9
+                      # 0 disables compression (good for debugging)
+pdf.fonttype       : 3         # Output Type 3 (Type3) or Type 42 (TrueType)
+pdf.inheritcolor   : False
+pdf.use14corefonts : False
+
+# pgf backend params
+pgf.debug           : False
+pgf.texsystem       : xelatex
+pgf.rcfonts         : True
+pgf.preamble        :
+
+# svg backend params
+svg.image_inline : True       # write raster image data directly into the svg file
+svg.fonttype : path            # How to handle SVG fonts:
+#    'none': Assume fonts are installed on the machine where the SVG will be viewed.
+#    'path': Embed characters as paths -- supported by most SVG renderers
+#    'svgfont': Embed characters as SVG fonts -- supported only by Chrome,
+#               Opera and Safari
+
+verbose.level  : silent      # one of silent, helpful, debug, debug-annoying
+verbose.fileo  : sys.stdout  # a log filename, sys.stdout or sys.stderr
+
+keymap.fullscreen : f, ctrl+f       # toggling
+keymap.home : h, r, home            # home or reset mnemonic
+keymap.back : left, c, backspace    # forward / backward keys to enable
+keymap.forward : right, v           #   left handed quick navigation
+keymap.pan : p                      # pan mnemonic
+keymap.zoom : o                     # zoom mnemonic
+keymap.save : s, ctrl+s             # saving current figure
+keymap.quit : ctrl+w, cmd+w         # close the current figure
+keymap.grid : g                     # switching on/off a grid in current axes
+keymap.yscale : l                   # toggle scaling of y-axes ('log'/'linear')
+keymap.xscale : k, L                # toggle scaling of x-axes ('log'/'linear')
+keymap.all_axes : a                 # enable all axes
+
+###ANIMATION settings
+animation.writer : ffmpeg         # MovieWriter 'backend' to use
+animation.codec : mpeg4           # Codec to use for writing movie
+animation.bitrate: -1             # Controls size/quality tradeoff for movie.
+                                  # -1 implies let utility auto-determine
+animation.frame_format: png       # Controls frame format used by temp files
+animation.ffmpeg_path: ffmpeg     # Path to ffmpeg binary. Without full path
+                                  # $PATH is searched
+animation.ffmpeg_args:            # Additional arguments to pass to ffmpeg
+animation.avconv_path: avconv     # Path to avconv binary. Without full path
+                                  # $PATH is searched
+animation.avconv_args:            # Additional arguments to pass to avconv
+animation.mencoder_path: mencoder
+                                  # Path to mencoder binary. Without full path
+                                  # $PATH is searched
+animation.mencoder_args:          # Additional arguments to pass to mencoder
+animation.convert_path: convert   # Path to ImageMagick's convert binary.
+                                  # On Windows use the full path since convert
+                                  # is also the name of a system tool.
+animation.convert_args:
+animation.html: none
